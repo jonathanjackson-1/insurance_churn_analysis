@@ -14,10 +14,5 @@ This dataset is based on 4 tables (“address”, “customer”, “demographic
 Each customer is defined by the primary identifier “INDIVIDUAL_ID”. Additionally, there is an “ADDRESS_ID”, which associates each customer in the “customer” table, with an address located in the “address” table.
 
 Schema:
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="[file:///Users/jonathanjackson/Downloads/SCHEMA%20pic.jpg](https://drive.google.com/drive/my-drive?dmr=1&ec=wgc-drive-hero-goto)">
- <source media="(prefers-color-scheme: light)" srcset="[file:///Users/jonathanjackson/Downloads/SCHEMA%20pic.jpg](https://drive.google.com/drive/my-drive?dmr=1&ec=wgc-drive-hero-goto)">
- <img alt="Image showing schema for insurance_churn database src="[Yfile:///Users/jonathanjackson/Downloads/SCHEMA%20pic.jpg](https://drive.google.com/drive/my-drive?dmr=1&ec=wgc-drive-hero-goto)">
-</picture>
-￼
+
 
