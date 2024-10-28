@@ -4,14 +4,16 @@ This analysis aims to decypher demographic variables that are likely to be corre
 
 The project uses Posgresql to support data cleaning/manipulation/extraction, Tableau for all data visualizations, and Python for all data modeling purposes.
 
-### Goals
-- Create dashboard showing key churn metrics, slicable by demographic varibale
-- Create linear regression model to predict churn of specific customer (tbd)
-
 ### Questions
 - Which demographic variables are correlated with high churn?
 - Is high policy cost related to churn rate?
 
+### Deliverables
+- Database accessible through posgresql containing all related tables
+- Dashboard showing key churn metrics, slicable by demographic varibale
+- Linear regression model to predict churn of specific customer (tbd)
+
+  
 ### Processes
 #### SQL
 - Create "address" database and import all relevant tables (Completed 10/28/24)
