@@ -10,7 +10,7 @@ The project uses Posgresql to support data cleaning/manipulation/extraction, Tab
 
 ### Questions
 - Which demographic variables are correlated with high churn?
-- Is high policy cost related to churn?
+- Is high policy cost related to churn rate?
 
 ### Processes
 #### SQL
