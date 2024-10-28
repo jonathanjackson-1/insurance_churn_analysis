@@ -11,7 +11,7 @@ This analysis aims to decypher demographic variables that are likely to be corre
 - Is high policy cost related to churn?
 
 ### Processes
-######SQL
+####SQL
 - Create "address" database and import all relevant tables (Completed 10/28/24)
 - Clean data
   - Edit "Has Children" column values in "demographic" table to change to boolean data type
