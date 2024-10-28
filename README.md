@@ -15,7 +15,7 @@ SQL
 - Create "address" database and import all relevant tables (Completed 10/28/24)
 - Clean data
   - Edit "Has Children" column values in "demographic" table to change to boolean data type
-  - Create new collumns for home values (high / low valuations)
+  - Create new columns for home values (high / low valuations)
 - Create dataframe containing demographic variables of churned customers; Create dataframe containing demographic variables of non-churned customers
 - Pull summary statistics for demographic variables of churned customers vs non-churned customers
 - Export data frames for further analysis in Tableau
@@ -24,6 +24,7 @@ Tableau
 - Create dashboard showing key churn metrics, slicable by demographic varibale
 
 Python (TBD)
+
 
 ## Data Structure
 This dataset is based on 4 tables (“address”, “customer”, “demographic”, “termination”), each containing information linked to a customer’s tenure with a hypothetical auto insurance company. The data set contains 2,280,321 unique customers with related address, demographic, and policy information. 269,259 of these customers have cancelled their policies within the last year - all of which of which are identified in the “termination” table.
