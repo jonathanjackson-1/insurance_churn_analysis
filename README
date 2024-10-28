@@ -17,7 +17,7 @@ Schema:
 
 ￼
 
-Most relevant analysis will be done by comparing demographic information of terminated customers to that of current customers. Data frames were created by joining both demographic / termination table to make analysis easier
+Most relevant analysis will be done by comparing demographic information of terminated customers to that of current customers. Data frames were created by joining both demographic / termination tables to make analysis easier
 
 Created dataframe for Terminated Customers' Demographics using:
 
