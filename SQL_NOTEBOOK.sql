@@ -6,12 +6,13 @@ SQL USE CASE
 GOALS
 - Create database (Completed 10/27/24)
 - Clean important tables for analysis
+- Create data frames for churned customers and current customers
 - Pull summary statistics on churned customers and current customers
-- Create dashboard showing key churn rate metrics filtered by demographic
   '''
 
 -- Cleaning Processes
--- Note: Most relevant analysis will be done by comparing demographic information of terminated customers to that of current customers. Most of these processes will specificially focus on these two tables
+-- Note: Most relevant analysis will be done by comparing demographic information of terminated customers to that of current customers. 
+-- Most of these processes will specificially focus on these two tables
   
 -- 1. Change Data type of column "HAS_CHILDREN" to boolean
 
