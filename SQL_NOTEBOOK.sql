@@ -31,12 +31,12 @@ USING "HAS_CHILDREN" = 1;
 
 -- 2. Split "HOME_MARKET_VALUE" columb into "HIGH VALUATION" and "LOW VALUATION" 
 
---   Step 1: Add new columns to store the lower and higher values
+-- Add new columns to store the lower and higher values
 ALTER TABLE demographic
 ADD COLUMN "LOW_VALUATION" BIGINT,
 ADD COLUMN "HIGH_VALUATION" BIGINT;
 
---   Step 2: Split "HOME_MARKET_VALUE" and populate new columns
+-- Split "HOME_MARKET_VALUE" and populate new columns
 -- errors caused here due to some values not following format for CAST statements to allow efficient splitting of the column
 -- created statement to set null when format is not followed; these null values will be dealt with later
 UPDATE demographic
@@ -57,6 +57,29 @@ SET "LOW_VALUATION" =
             ELSE NULL
         END;
 
--- Step 3: Drop original "HOME_MARKET_VALUE" column
+-- Drop original "HOME_MARKET_VALUE" column
 ALTER TABLE demographic
 DROP COLUMN "HOME_MARKET_VALUE";
+
+
+-- 3. Drop null/duplicate values from "demographic" and "termination" tables
+
+-- Drop null values from "demographic" variables
+DELETE FROM demographic
+WHERE "INCOME" IS NULL
+	OR "HAS_CHILDREN" IS NULL
+	OR "LENGTH_OF_RESIDENCE" IS NULL
+	OR "MARITAL_STATUS" IS NULL
+	OR "HOME_OWNER" IS NULL
+	OR "COLLEGE_DEGREE" IS NULL
+	OR "GOOD_CREDIT" IS NULL
+	OR "LOW_VALUATION" IS NULL
+	OR "HIGH_VALUATION" IS NULL;
+	
+-- 525793 Rows affected
+
+-- Drop null values from "termination" variables
+DELETE FROM termination
+WHERE "ACCT_SUSPD_DATE" IS NULL
+
+-- 0 Rows affected
