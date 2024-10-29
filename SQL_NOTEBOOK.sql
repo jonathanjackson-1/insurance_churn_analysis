@@ -16,4 +16,14 @@ GOALS
 UPDATE demographic
 SET "HAS_CHILDREN" = REPLACE("HAS_CHILDREN", '.0', '')
 
+-- Data type changed to BigInt
+ALTER TABLE demographic
+ALTER COLUMN "HAS_CHILDREN" TYPE BIGINT USING "HAS_CHILDREN"::BIGINT;
 
+-- Data type changed to boolean
+ALTER TABLE demographic
+ALTER COLUMN "HAS_CHILDREN" TYPE boolean 
+USING "HAS_CHILDREN" = 1;
+
+
+-- 2. Split "HOME_MARKET_VALUE" columb into "HIGH VALUATION" and "LOW VALUATION"
