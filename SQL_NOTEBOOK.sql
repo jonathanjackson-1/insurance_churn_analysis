@@ -163,3 +163,6 @@ FROM demographic;
 -- % w/ good credit: 84.56%
 
 -- note: go back to find marital status by casting as boolean
+SELECT ROUND(AVG(CASE WHEN "MARITAL_STATUS" = 'Married' THEN 1 ELSE 0 END) * 100, 2) AS percent_married
+FROM demographic;
+-- Percent Married: 62.75%
