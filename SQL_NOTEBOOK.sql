@@ -4,7 +4,7 @@ SQL USE CASE
 - Clean/Manipulate all data
 
 GOALS
-- Create database
+- Create database (Completed 10/27/24)
 - Clean important tables for analysis
 - Pull summary statistics on churned customers and current customers
 - Create dashboard showing key churn rate metrics filtered by demographic
@@ -30,3 +30,33 @@ USING "HAS_CHILDREN" = 1;
 
 
 -- 2. Split "HOME_MARKET_VALUE" columb into "HIGH VALUATION" and "LOW VALUATION" 
+
+--   Step 1: Add new columns to store the lower and higher values
+ALTER TABLE demographic
+ADD COLUMN "LOW_VALUATION" BIGINT,
+ADD COLUMN "HIGH_VALUATION" BIGINT;
+
+--   Step 2: Split "HOME_MARKET_VALUE" and populate new columns
+-- errors caused here due to some values not following format for CAST statements to allow efficient splitting of the column
+-- created statement to set null when format is not followed; these null values will be dealt with later
+UPDATE demographic
+SET "LOW_VALUATION" = 
+        CASE 
+            WHEN "HOME_MARKET_VALUE" LIKE '% - %' 
+            THEN CAST(SPLIT_PART("HOME_MARKET_VALUE", ' - ', 1) AS BIGINT)
+            WHEN "HOME_MARKET_VALUE" LIKE '%Plus%' 
+            THEN CAST(regexp_replace("HOME_MARKET_VALUE", '[^0-9]', '', 'g') AS BIGINT)
+            ELSE NULL
+        END,
+    "HIGH_VALUATION" = 
+        CASE 
+            WHEN "HOME_MARKET_VALUE" LIKE '% - %' 
+            THEN CAST(SPLIT_PART("HOME_MARKET_VALUE", ' - ', 2) AS BIGINT)
+            WHEN "HOME_MARKET_VALUE" LIKE '%Plus%' 
+            THEN NULL -- Since "Plus" implies no upper bound, set it to NULL or a very high value if desired
+            ELSE NULL
+        END;
+
+-- Step 3: Drop original "HOME_MARKET_VALUE" column
+ALTER TABLE demographic
+DROP COLUMN "HOME_MARKET_VALUE";
