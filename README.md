@@ -16,15 +16,14 @@ The project uses Posgresql to support data cleaning/manipulation/extraction, Tab
   
 ### Processes
 #### SQL
-- Create "address" database and import all relevant tables (Completed 10/28/24)
+- Create "address" database and import all relevant tables
 - Clean data
-  - Edit "Has Children" column values in "demographic" table to change to boolean data type
-  - Create new columns for home values (high / low valuations)
 - Create dataframe containing demographic variables of churned customers; Create dataframe containing demographic variables of non-churned customers
 - Pull summary statistics for demographic variables of churned customers vs non-churned customers
 - Export data frames for further analysis in Tableau
 
 #### Tableau
+- Create relevant visualizations
 - Create dashboard showing key churn metrics, slicable by demographic varibale
 
 #### Python 
