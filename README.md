@@ -31,13 +31,15 @@ The project uses Posgresql to support data cleaning/manipulation/extraction, Tab
 
 
 ## Data Structure
-This dataset is based on 4 tables (“address”, “customer”, “demographic”, “termination”), each containing information linked to a customer’s tenure with a hypothetical auto insurance company. The data set contains 2,280,321 unique customers with related address, demographic, and policy information. 269,259 of these customers have cancelled their policies within the last year - all of which of which are identified in the “termination” table.
+This dataset is based on 4 tables (“address”, “customer”, “demographic”, “termination”), each containing information linked to a customer’s tenure with a hypothetical auto insurance company. 
+
+The dataset contains 2,280,321 unique customers with related address, demographic, and policy information. 269,259 of these customers have cancelled their policies within the last year - all of which of which are identified in the “termination” table.
 
 Each customer is defined by the primary identifier “INDIVIDUAL_ID”. Additionally, there is an “ADDRESS_ID”, which associates each customer in the “customer” table, with an address located in the “address” table.
 
 (note: all addresses, and personal customer information is ficticious; will not be used for any purpose of analysis etc.) 
 
 #### Schema:
-![Picture of database schema](https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/SCHEMA%20pic.jpg))
+![Picture of database schema](https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/SCHEMA%20pic.jpg)
 
 
