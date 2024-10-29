@@ -10,7 +10,7 @@ GOALS
 - Pull summary statistics on churned customers and current customers: count, mean, median for numeric variables ; % true for boolean
   '''
 
--- Cleaning Processes
+-- CLEANING PROCESSES
 -- Notes: Most relevant analysis will be done by comparing demographic information of terminated customers to that of current customers. 
 -- Most of these processes will specificially focus on these two tables
   
@@ -134,3 +134,32 @@ FULL OUTER JOIN "termination"
 ON "termination"."INDIVIDUAL_ID" = "demographic"."INDIVIDUAL_ID"
 WHERE "termination"."INDIVIDUAL_ID" IS NULL;
 -- Saved dataframe as .csv file for later use: "nonchurn_customers_demographics_dataframe_clean.csv"
+
+
+-- SUMMARY STATISTICS
+
+-- AVERAGES FOR ALL CUSTOMERS
+-- Find averages for numeric demographic variables
+-- note: error here due to data type, used CAST to convert columns to numeric for avg function
+SELECT ROUND(CAST(avg("INCOME") AS numeric), 2) AS avg_income_rounded, 
+       ROUND(CAST(avg("LENGTH_OF_RESIDENCE") AS numeric), 2) AS avg_length_of_residence,
+	   ROUND(avg("LOW_VALUATION"), 2),
+	   ROUND(avg("HIGH_VALUATION"), 2)
+FROM demographic;
+-- Mean Income: 81,815.84
+-- Mean Length of Residence: 7.91
+-- Mean Low Valuation: 117,419.66
+-- Mean High Valuation: 144,733.43
+
+-- Find averages for boolean demographic variables
+SELECT ROUND(AVG("HAS_CHILDREN"::int) * 100, 2) AS "%_HAS_CHILD",
+	ROUND(AVG("HOME_OWNER"::int) * 100, 2) AS "%_HOMEOWNER",
+	ROUND(AVG("COLLEGE_DEGREE"::int) * 100, 2) AS "%_COLLEGE",
+	ROUND(AVG("GOOD_CREDIT"::int) * 100, 2) AS "%_GOOD_CREDT"
+FROM demographic;
+-- % w/ child: 52.12%
+-- % homeowner: 86.41%
+-- % w/ college: 35.33%
+-- % w/ good credit: 84.56%
+
+-- note: go back to find marital status by casting as boolean, and market value columnsSE
