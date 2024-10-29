@@ -97,4 +97,40 @@ GROUP BY "INDIVIDUAL_ID"
 HAVING COUNT(*) > 1;
 -- 0 Rows affected
 
--- Cleaning complete for now (10/28/24)
+-- Cleaning complete for now
+
+
+-- Create dataframe for demographics of churned customers
+SELECT "termination"."INDIVIDUAL_ID", 
+	"demographic"."INCOME",
+	"demographic"."HAS_CHILDREN",
+	"demographic"."LENGTH_OF_RESIDENCE",
+	"demographic"."MARITAL_STATUS",
+	"demographic"."HOME_OWNER",
+	"demographic"."COLLEGE_DEGREE",
+	"demographic"."GOOD_CREDIT",
+	"demographic"."LOW_VALUATION",
+	"demographic"."HIGH_VALUATION",
+	"termination"."ACCT_SUSPD_DATE"
+FROM "demographic"
+FULL OUTER JOIN "termination"
+ON "termination"."INDIVIDUAL_ID" = "demographic"."INDIVIDUAL_ID"
+WHERE "termination"."INDIVIDUAL_ID" IS NOT NULL
+-- Saved dataframe as .csv file for later use: "churn_customers_demographics_dataframe_clean.csv"
+
+-- Create dataframe for demographics of customers who have not yet churned
+SELECT "demographic"."INDIVIDUAL_ID", 
+	"demographic"."INCOME",
+	"demographic"."HAS_CHILDREN",
+	"demographic"."LENGTH_OF_RESIDENCE",
+	"demographic"."MARITAL_STATUS",
+	"demographic"."HOME_OWNER",
+	"demographic"."COLLEGE_DEGREE",
+	"demographic"."GOOD_CREDIT",
+	"demographic"."LOW_VALUATION",
+	"demographic"."HIGH_VALUATION"
+FROM "demographic"
+FULL OUTER JOIN "termination"
+ON "termination"."INDIVIDUAL_ID" = "demographic"."INDIVIDUAL_ID"
+WHERE "termination"."INDIVIDUAL_ID" IS NULL
+-- Saved dataframe as .csv file for later use: "nonchurn_customers_demographics_dataframe_clean.csv"
