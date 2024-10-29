@@ -4,8 +4,8 @@ SQL USE CASE
 - Clean/Manipulate all data
 
 GOALS
-- Create database (Completed 10/27/24)
-- Clean important tables for analysis
+- Create database
+- Clean important tables for analysis 
 - Create data frames for churned customers and current customers
 - Pull summary statistics on churned customers and current customers (count, mean, median)
   '''
@@ -76,11 +76,25 @@ WHERE "INCOME" IS NULL
 	OR "GOOD_CREDIT" IS NULL
 	OR "LOW_VALUATION" IS NULL
 	OR "HIGH_VALUATION" IS NULL;
-	
 -- 525793 Rows affected
 
 -- Drop null values from "termination" variables
 DELETE FROM termination
 WHERE "ACCT_SUSPD_DATE" IS NULL
-
 -- 0 Rows affected
+
+-- Return count of duplicate Id's in "demographic" table
+SELECT "INDIVIDUAL_ID", COUNT(*) AS duplicate_count
+FROM demographic
+GROUP BY "INDIVIDUAL_ID"
+HAVING COUNT(*) > 1;
+-- 0 Rows affected
+
+-- Return count of duplicate Id's in "termination" table
+SELECT "INDIVIDUAL_ID", COUNT(*) AS duplicate_count
+FROM termination
+GROUP BY "INDIVIDUAL_ID"
+HAVING COUNT(*) > 1;
+-- 0 Rows affected
+
+-- Cleaning complete for now (10/28/24)
