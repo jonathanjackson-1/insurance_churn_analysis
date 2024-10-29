@@ -4,14 +4,14 @@ SQL USE CASE
 - Clean/Manipulate all data
 
 GOALS
-- Create database
-- Clean important tables for analysis 
-- Create data frames for churned customers and current customers
+- Create database (Complete 10/27/24)
+- Clean important tables for analysis (Complete 10/28/24)
+- Create clean data frames for churned customers and current customers (Complete 10/28/24)
 - Pull summary statistics on churned customers and current customers (count, mean, median)
   '''
 
 -- Cleaning Processes
--- Note: Most relevant analysis will be done by comparing demographic information of terminated customers to that of current customers. 
+-- Notes: Most relevant analysis will be done by comparing demographic information of terminated customers to that of current customers. 
 -- Most of these processes will specificially focus on these two tables
   
 -- 1. Change Data type of column "HAS_CHILDREN" to boolean
@@ -30,7 +30,7 @@ ALTER COLUMN "HAS_CHILDREN" TYPE boolean
 USING "HAS_CHILDREN" = 1;
 
 
--- 2. Split "HOME_MARKET_VALUE" columb into "HIGH VALUATION" and "LOW VALUATION" 
+-- 2. Split "HOME_MARKET_VALUE" column into "HIGH VALUATION" and "LOW VALUATION" 
 
 -- Add new columns to store the lower and higher values
 ALTER TABLE demographic
@@ -39,7 +39,7 @@ ADD COLUMN "HIGH_VALUATION" BIGINT;
 
 -- Split "HOME_MARKET_VALUE" and populate new columns
 -- errors caused here due to some values not following format for CAST statements to allow efficient splitting of the column
--- created statement to set null when format is not followed; these null values will be dealt with later
+-- created CASE statement to set null when format is not followed; these null values will be dealt with later
 UPDATE demographic
 SET "LOW_VALUATION" = 
         CASE 
