@@ -162,4 +162,4 @@ FROM demographic;
 -- % w/ college: 35.33%
 -- % w/ good credit: 84.56%
 
--- note: go back to find marital status by casting as boolean, and market value columnsSE
+-- note: go back to find marital status by casting as boolean
