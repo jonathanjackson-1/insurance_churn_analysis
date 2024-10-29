@@ -38,6 +38,6 @@ Each customer is defined by the primary identifier “INDIVIDUAL_ID”. Addition
 (note: all addresses, and personal customer information is ficticious; will not be used for any purpose of analysis etc.) 
 
 #### Schema:
-![Picture of database schema](SCHEMA pic.jpg)
+![Picture of database schema](https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/SCHEMA%20pic.jpg))
 
 
