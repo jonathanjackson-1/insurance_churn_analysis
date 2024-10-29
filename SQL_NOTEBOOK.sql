@@ -7,7 +7,7 @@ GOALS
 - Create database (Complete 10/27/24)
 - Clean important tables for analysis (Complete 10/28/24)
 - Create clean data frames for churned customers and current customers (Complete 10/28/24)
-- Pull summary statistics on churned customers and current customers (count, mean, median)
+- Pull summary statistics on churned customers and current customers: count, mean, median for numeric variables ; % true for boolean
   '''
 
 -- Cleaning Processes
@@ -18,7 +18,7 @@ GOALS
 
 -- Decimal dropped from "HAS_CHILDREN" column in "demographic" table
 UPDATE demographic
-SET "HAS_CHILDREN" = REPLACE("HAS_CHILDREN", '.0', '')
+SET "HAS_CHILDREN" = REPLACE("HAS_CHILDREN", '.0', '');
 
 -- Data type changed to BigInt
 ALTER TABLE demographic
@@ -48,7 +48,7 @@ SET "LOW_VALUATION" =
             WHEN "HOME_MARKET_VALUE" LIKE '%Plus%' 
             THEN CAST(regexp_replace("HOME_MARKET_VALUE", '[^0-9]', '', 'g') AS BIGINT)
             ELSE NULL
-        END,
+        END;
     "HIGH_VALUATION" = 
         CASE 
             WHEN "HOME_MARKET_VALUE" LIKE '% - %' 
@@ -80,7 +80,7 @@ WHERE "INCOME" IS NULL
 
 -- Drop null values from "termination" variables
 DELETE FROM termination
-WHERE "ACCT_SUSPD_DATE" IS NULL
+WHERE "ACCT_SUSPD_DATE" IS NULL;
 -- 0 Rows affected
 
 -- Return count of duplicate Id's in "demographic" table
@@ -115,7 +115,7 @@ SELECT "termination"."INDIVIDUAL_ID",
 FROM "demographic"
 FULL OUTER JOIN "termination"
 ON "termination"."INDIVIDUAL_ID" = "demographic"."INDIVIDUAL_ID"
-WHERE "termination"."INDIVIDUAL_ID" IS NOT NULL
+WHERE "termination"."INDIVIDUAL_ID" IS NOT NULL;
 -- Saved dataframe as .csv file for later use: "churn_customers_demographics_dataframe_clean.csv"
 
 -- Create dataframe for demographics of customers who have not yet churned
@@ -132,5 +132,5 @@ SELECT "demographic"."INDIVIDUAL_ID",
 FROM "demographic"
 FULL OUTER JOIN "termination"
 ON "termination"."INDIVIDUAL_ID" = "demographic"."INDIVIDUAL_ID"
-WHERE "termination"."INDIVIDUAL_ID" IS NULL
+WHERE "termination"."INDIVIDUAL_ID" IS NULL;
 -- Saved dataframe as .csv file for later use: "nonchurn_customers_demographics_dataframe_clean.csv"
