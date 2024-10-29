@@ -11,7 +11,7 @@ The project uses Posgresql to support data cleaning/manipulation/extraction, Tab
 ### Deliverables
 - Clean Database accessible through posgresql containing all related tables
 - Dashboard showing key churn metrics, slicable by demographic varibale
-- Linear regression model to predict churn of specific customer (tbd)
+- Linear regression model to predict churn of specific customers (tbd)
 
   
 ### Processes
