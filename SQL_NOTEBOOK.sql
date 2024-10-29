@@ -7,7 +7,7 @@ GOALS
 - Create database (Completed 10/27/24)
 - Clean important tables for analysis
 - Create data frames for churned customers and current customers
-- Pull summary statistics on churned customers and current customers
+- Pull summary statistics on churned customers and current customers (count, mean, median)
   '''
 
 -- Cleaning Processes
