@@ -2,7 +2,7 @@
 ## Summary
 This analysis aims to decypher demographic variables that are likely to be correlated with high churn, in the case of an auto-insurance company's customers. 
 
-The project's main goal is to reccomend strategies to reduce churn, as well as to uncover key risk components of churn, in order to guide future customer prospecting
+The project's main goal is to reccomend strategies to reduce churn, as well as to uncover key risk components of churn, in order to guide future customer prospecting.
 
 Insights from this analysis are focused on these key variables:
 - Current Annual Policy Amount
@@ -21,9 +21,9 @@ Insights from this analysis are focused on these key variables:
 - Is high policy premium correlated with high churn?
 
 ### Deliverables
-- Clean Database accessible through posgresql containing all related tables (Full SQL Notebook accessible [here](https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/SQL_NOTEBOOK.sql)
-- Dashboard showing key churn metrics, slicable by demographic variable
-- Executive Summary indicating key insights and visualizations uncovered during analysis
+- Clean Database accessible through posgresql containing all related tables. *(Full SQL Notebook accessible [here](https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/SQL_NOTEBOOK.sql))*
+- Dashboard showing key churn metrics, slicable by demographic variable.
+- Executive Summary indicating key insights and visualizations uncovered during analysis.
 
   
 ### Processes
