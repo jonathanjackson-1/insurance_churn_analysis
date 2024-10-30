@@ -6,6 +6,7 @@ The project's main goal is to reccomend strategies to reduce churn, as well as t
 
 Insights from this analysis are focused on these key variables:
 - Current Annual Policy Amount
+- Policy Start Date
 - Income
 - Home Value
 - College Education
