@@ -22,7 +22,7 @@ Insights from this analysis are focused on these key variables:
 
 ### Deliverables
 - Clean Database accessible through posgresql containing all related tables
-- Dashboard showing key churn metrics, slicable by demographic varibale
+- Dashboard showing key churn metrics, slicable by demographic variable
 - Linear regression model to predict churn of specific customers (tbd)
 
   
