@@ -21,7 +21,7 @@ Insights from this analysis are focused on these key variables:
 - Is high policy premium correlated with high churn?
 
 ### Deliverables
-- Clean Database accessible through posgresql containing all related tables
+- Clean Database accessible through posgresql containing all related tables (Full SQL Notebook accessible [here](https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/SQL_NOTEBOOK.sql)
 - Dashboard showing key churn metrics, slicable by demographic variable
 - Executive Summary indicating key insights and visualizations uncovered during analysis
 
