@@ -9,7 +9,7 @@ Insights from this analysis are focused on these key variables:
 - College Education
 - Credit Score
 - Marital Status
-- # of Children
+- Number of Children
   
 
 ### Questions
