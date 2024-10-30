@@ -166,3 +166,74 @@ FROM demographic;
 SELECT ROUND(AVG(CASE WHEN "MARITAL_STATUS" = 'Married' THEN 1 ELSE 0 END) * 100, 2) AS percent_married
 FROM demographic;
 -- Percent Married: 62.75%
+
+-- Find count of all customers post cleaning
+SELECT COUNT(*)
+FROM demographic
+-- Count: 1,586,786
+
+-- AVERAGES FOR CHURN CUSTOMERS
+-- Imported "churn_customers_demographics_dataframe_clean.csv" as seperate table "churn_df" for this
+
+-- Find count of churn customers
+SELECT COUNT(*)
+FROM churn_df
+-- Count: 269,259
+
+-- Find averages for numeric demographic variables
+SELECT ROUND(CAST(avg("INCOME") AS numeric), 2) AS avg_income_rounded, 
+       ROUND(CAST(avg("LENGTH_OF_RESIDENCE") AS numeric), 2) AS avg_length_of_residence,
+	   ROUND(avg("LOW_VALUATION"), 2),
+	   ROUND(avg("HIGH_VALUATION"), 2)
+FROM churn_df;
+-- Mean Income: 80,993.65
+-- Mean Length of Residence: 7.43
+-- Mean Low Valuation: 117,484.91
+-- Mean High Valuation: 144830.19
+
+-- Find averages for boolean demographic variables
+SELECT ROUND(AVG("HAS_CHILDREN"::int) * 100, 2) AS "%_HAS_CHILD",
+	ROUND(AVG("HOME_OWNER"::int) * 100, 2) AS "%_HOMEOWNER",
+	ROUND(AVG("COLLEGE_DEGREE"::int) * 100, 2) AS "%_COLLEGE",
+	ROUND(AVG("GOOD_CREDIT"::int) * 100, 2) AS "%_GOOD_CREDT"
+FROM churn_df;
+-- % w/ child: 55.11%
+-- % homeowner: 85.52%
+-- % w/ college: 33.07%
+-- % w/ good credit: 83.87%
+
+-- Marital Status avg
+SELECT ROUND(AVG(CASE WHEN "MARITAL_STATUS" = 'Married' THEN 1 ELSE 0 END) * 100, 2) AS percent_married
+FROM churn_df:
+-- Percent Married: 41.83%
+
+
+-- AVERAGES FOR NONCHURN CUSTOMERS
+-- Imported "nonchurn_customers_demographics_dataframe_clean.csv" as seperate table "nonchurn_df" for this
+	
+-- Find count of churn customers
+SELECT COUNT(*)
+FROM nonchurn_df
+-- Count: 1,405,632
+
+-- Find averages for numeric demographic variables
+SELECT ROUND(CAST(avg("INCOME") AS numeric), 2) AS avg_income_rounded, 
+       ROUND(CAST(avg("LENGTH_OF_RESIDENCE") AS numeric), 2) AS avg_length_of_residence,
+	   ROUND(avg("LOW_VALUATION"), 2),
+	   ROUND(avg("HIGH_VALUATION"), 2)
+FROM nonchurn_df;
+-- Mean Income: 81,921.80
+-- Mean Length of Residence: 7.97
+-- Mean Low Valuation: 117,401.09
+-- Mean High Valuation: 144720.96
+
+-- Find averages for boolean demographic variables
+SELECT ROUND(AVG("HAS_CHILDREN"::int) * 100, 2) AS "%_HAS_CHILD",
+	ROUND(AVG("HOME_OWNER"::int) * 100, 2) AS "%_HOMEOWNER",
+	ROUND(AVG("COLLEGE_DEGREE"::int) * 100, 2) AS "%_COLLEGE",
+	ROUND(AVG("GOOD_CREDIT"::int) * 100, 2) AS "%_GOOD_CREDT"
+FROM nonchurn_df;
+-- % w/ child: 51.73%
+-- % homeowner: 86.53%
+-- % w/ college: 35.62%
+-- % w/ good credit: 84.62%
