@@ -237,3 +237,11 @@ FROM nonchurn_df;
 -- % homeowner: 86.53%
 -- % w/ college: 35.62%
 -- % w/ good credit: 84.62%
+
+-- Marital Status avg
+SELECT ROUND(AVG(CASE WHEN "MARITAL_STATUS" = 'Married' THEN 1 ELSE 0 END) * 100, 2) AS percent_married
+FROM nonchurn_df;
+-- Percent Married: 62.82%
+
+
+--- Exported churn, nonchurn, and all customer dataframes for further analysis and visualization building
