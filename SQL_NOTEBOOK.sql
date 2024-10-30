@@ -4,10 +4,10 @@ SQL USE CASE
 - Clean/Manipulate all data
 
 GOALS
-- Create database (Complete 10/27/24)
-- Clean important tables for analysis (Complete 10/28/24)
-- Create clean data frames for churned customers and current customers (Complete 10/28/24)
-- Pull summary statistics on churned customers and current customers: count, mean, median for numeric variables ; % true for boolean
+- Create database (v1 Completed 10/27/24) (v2 Updated 10/29)
+- Clean important tables for analysis (Completed 10/28/24)
+- Create clean data frames for churned customers and current customers (Completed 10/28/24)
+- Pull summary statistics on churned customers and current customers: count, mean, median for numeric variables ; % true for boolean (Completed 10/29)
   '''
 
 -- CLEANING PROCESSES
