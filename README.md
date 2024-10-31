@@ -43,7 +43,7 @@ Insights from this analysis are focused on these key variables:
 
 ## Data Structure
 ### Project Resources
-Based on a public dataset of auto-insurance customers found on Kaggle. Link can be referenced on the repo's main page
+Based on a public dataset of auto-insurance customers found on Kaggle. *(Accessible [here](https://www.kaggle.com/datasets/merishnasuwal/auto-insurance-churn-analysis-dataset?select=address.csv))*
 
 The project uses Posgresql to support data cleaning/manipulation/extraction, Tableau for all data visualizations, and Python for all data modeling purposes.
 
