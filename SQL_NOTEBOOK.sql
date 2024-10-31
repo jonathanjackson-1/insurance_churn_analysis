@@ -245,3 +245,5 @@ FROM nonchurn_df;
 
 
 --- Exported churn, nonchurn, and all customer dataframes for further analysis and visualization building
+
+-- Create Merged dataframe for visualization building with new column "CHURN_STATUS"
