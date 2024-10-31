@@ -246,4 +246,25 @@ FROM nonchurn_df;
 
 --- Exported churn, nonchurn, and all customer dataframes for further analysis and visualization building
 
--- Create Merged dataframe for visualization building with new column "CHURN_STATUS"
+-- Create Merged dataframe for visualization building 
+-- Create new column "CHURN_STATUS" by creating CASE for populated/null "ACCT_SUSPD_DATE"
+-- Added null date column to nonchurn_df and demographic to make CASE statement work
+
+CREATE TABLE merged_customers AS
+SELECT *, 
+       CASE 
+           WHEN "ACCT_SUSPD_DATE" IS NOT NULL THEN 'Churn'
+           ELSE 'Non-Churn'
+       END AS "CHURN_STATUS"
+FROM churn_df
+UNION ALL
+SELECT *, 
+       'Non-Churn' AS "CHURN_STATUS"
+FROM nonchurn_df;
+-- 'merged_customers' table created
+
+-- adding customers for 'ALL' group
+INSERT INTO merged_customers
+SELECT *, 'All' AS "CHURN_STATUS"
+FROM demographic;
+-- Exporting dataset as "merged_customers_df.csv"
