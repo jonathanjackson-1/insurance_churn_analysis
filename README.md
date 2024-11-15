@@ -95,7 +95,6 @@ Summary Statistics for each group can be found below:
 - % married: 62.82%
 
 **All Customer Statistics**
--
 
 ### Key Insights
 Insight A: Differences in Mean Tenure Length
