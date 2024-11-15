@@ -101,6 +101,7 @@ Summary Statistics for each group can be found below:
 Insight A: Differences in Mean Tenure Length
 
 Insight B: No Significant Difference in Demographic Variables
+
 note: married % research?
 
 ### Recommendations
