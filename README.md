@@ -5,7 +5,6 @@ This analysis aims to decypher demographic variables that are likely to be corre
 The project's main goal is to recommend strategies to reduce churn, as well as to uncover key risk components of churn, in order to provide guidance to the marketing team on future customer segmentation.
 
 Insights from this analysis are focused on these key variables:
-- Current Annual Policy Amount
 - Policy Start Date
 - Income
 - Home Value
@@ -64,7 +63,7 @@ Each customer is defined by the primary identifier “INDIVIDUAL_ID”. Addition
 
 ## Insights Deep Dive
 ### Overview of Analysis Process
-This analysis begins by separating all data into 3 seperate groups based on chrun status. "Churned Customers", "Nonchurned Customers", and "All" - which cointains all data from both groups. We analyze all demographic data and the tenure length of each customer.
+This analysis begins by separating all data into 3 seperate groups based on chrun status. "Churned Customers", "Nonchurned Customers", and "All" - which cointains all data from both of the prior groups. We analyze all demographic data and the tenure length of each customer.
 
 Summary Statistics for each group can be found below:
 
