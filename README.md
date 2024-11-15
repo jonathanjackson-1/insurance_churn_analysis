@@ -2,7 +2,7 @@
 ## Summary
 This analysis aims to decypher demographic variables that are likely to be correlated with high churn, in the case of an auto-insurance company's customers. 
 
-The project's main goal is to recommend strategies to reduce churn, as well as to uncover key risk components of churn, in order to guide future customer prospecting.
+The project's main goal is to recommend strategies to reduce churn, as well as to uncover key risk components of churn, in order to provide guidance to the marketing team on future customer segmentation.
 
 Insights from this analysis are focused on these key variables:
 - Current Annual Policy Amount
