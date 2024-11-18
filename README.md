@@ -69,11 +69,12 @@ Summary Statistics for each group can be found below:
 
 **Churned Customer Statistics**
 - Count: 269,259
-- Mean Income: 80,993.65
-- Mean Length of Residence: 7.43
-- Mean Low Home Valuation: 117,484.91
-- Mean High Home Valuation: 144,830.19
-- Mean Tenure: 
+- Mean Income: $80,993.65
+- Mean Length of Residence: 7.43 years
+- Mean Low Home Valuation: $117,484.91
+- Mean High Home Valuation: $144,830.19
+- Mean Tenure: 2123.37 days
+- Mean Policy Cost: $945.46
 - % w/ child: 55.11%
 - % homeowner: 85.52%
 - % w/ college: 33.07%
@@ -82,11 +83,12 @@ Summary Statistics for each group can be found below:
 
 **Non-Churned Customer Statistics**
 - Count: 1,405,632
-- Mean Income: 81,921.80
-- Mean Length of Residence: 7.97
-- Mean Low Valuation: 117,401.09
-- Mean High Valuation: 144,720.96
-- Mean Tenure:
+- Mean Income: $81,921.80
+- Mean Length of Residence: 7.97 years
+- Mean Low Valuation: $117,401.09
+- Mean High Valuation: $144,720.96
+- Mean Tenure: 3791.04 days
+- Mean Policy Cost: $942.34
 - % w/ child: 51.73%
 - % homeowner: 86.53%
 - % w/ college: 35.62%
