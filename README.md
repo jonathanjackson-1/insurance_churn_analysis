@@ -101,7 +101,7 @@ Summary Statistics for each group can be found below:
 #### Insight A: Differences in Tenure Length
 There are clear differences in the mean tenure length of the Churned dataframe (Average of 2123 days) when compared to the Non-Churn group (Average of 3791 days). However, this is ultimately flawed by survivorship bias; customers who haven't churned are still active, increasing their tenure. 
 
-Here we opt to compare the churn rate at different points in tenure to come to a more accurate conclusion.
+Here we opt to compare the churn rate at each year of tenure to come to a more accurate conclusion.
 
 Insight B: No Significant Difference in Demographic Variables
 
