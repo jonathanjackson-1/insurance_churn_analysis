@@ -4,8 +4,8 @@ This analysis aims to decypher demographic variables that are likely to be corre
 
 The project's main goal is to recommend strategies to reduce churn, as well as to uncover key risk components of churn, in order to provide guidance to the marketing team on future customer segmentation.
 
-Insights from this analysis are focused on these key variables:
-- Policy Start Date
+**Insights from this analysis are focused on these key variables:**
+- Annual Policy Cost
 - Income
 - Home Value
 - College Education
@@ -16,6 +16,7 @@ Insights from this analysis are focused on these key variables:
 
 ### Key Questions
 - Which demographic variables are correlated with high churn?
+- Are higher Policy Costs correlated with high churn?
 - Is there a length of tenure at which churn becomes unlikely?
 
 ### Deliverables
