@@ -21,8 +21,7 @@ The project's main goal is to recommend strategies to reduce churn, as well as t
 
 ### Deliverables
 - Clean Database accessible through postgresql containing all related tables. *(Full SQL Notebook accessible [here](https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/SQL_NOTEBOOK.sql))*
-- Dashboard showing key churn metrics, slicable by demographic variable.
-- Executive Summary indicating key insights and visualizations uncovered during analysis.
+- Executive Summary indicating key insights and visualizations uncovered during analysis, as well as reccomendations for future customer segmentation and areas of analysis.
 
   
 ### Processes
