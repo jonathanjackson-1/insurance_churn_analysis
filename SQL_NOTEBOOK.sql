@@ -8,7 +8,8 @@ GOALS
 - Clean important tables for analysis (Completed 10/28/24)
 - Create clean data frames for churned customers and current customers (Completed 10/28/24)
 - Pull summary statistics on churned customers and current customers: count, mean, median for numeric variables ; % true for boolean (Completed 10/29)
-  '''
+- Append customer policy information to merged dataset (Completed 11/18)
+'''
 
 -- CLEANING PROCESSES
 -- Notes: Most relevant analysis will be done by comparing demographic information of terminated customers to that of current customers. 
@@ -268,3 +269,37 @@ INSERT INTO merged_customers
 SELECT *, 'All' AS "CHURN_STATUS"
 FROM demographic;
 -- Exporting dataset as "merged_customers_df.csv"
+
+-- Appending Policy Information from "customer" table
+
+-- alter datatype to match "merged_customers"
+ALTER TABLE customer
+ALTER COLUMN "INDIVIDUAL_ID" TYPE VARCHAR
+USING "INDIVIDUAL_ID"::VARCHAR;
+
+-- Append selected information
+SELECT merged_customers.*, customer."CURR_ANN_AMT", customer."DAYS_TENURE"
+FROM merged_customers 
+LEFT JOIN customer 
+ON merged_customers."INDIVIDUAL_ID" = customer."INDIVIDUAL_ID";
+-- Exported data as "merged_customers_v2" for use in tableau
+
+-- Summary statistics for new variables where customer CHURNED
+SELECT AVG(customer."CURR_ANN_AMT"),
+       AVG(customer."DAYS_TENURE")
+FROM merged_customers 
+LEFT JOIN customer 
+ON merged_customers."INDIVIDUAL_ID" = customer."INDIVIDUAL_ID"
+WHERE "CHURN_STATUS" = 'Churn';
+-- Mean Cost: 945.46
+-- Mean Tenure: 2123.37
+
+-- Summary for new variables where customer DID NOT CHURN
+SELECT AVG(customer."CURR_ANN_AMT") as "AVG_COST",
+       AVG(customer."DAYS_TENURE") as "AVG_TENURE"
+FROM merged_customers 
+LEFT JOIN customer 
+ON merged_customers."INDIVIDUAL_ID" = customer."INDIVIDUAL_ID"
+WHERE "CHURN_STATUS" = 'Non-Churn';
+-- Mean Cost: 942.34
+-- Mean Tenure: 3791.04
