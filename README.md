@@ -112,8 +112,8 @@ Demographic variables observed: Income, Length of Residence, Home Value, Have Ch
 
 - Little to no differences were shown in summary statistics between the two groups.
 - The only difference of note was found in the % married, with 62.82% married in the Non-Churn group as opposed to 41.83% among churned customers.
-- Maybe more research can be done to determine whether marraige factors contribute to churn in any adjancent ways?
-- Understanding demographic drivers of lifetine customers represents a key insight for customer prospecting.
+- Maybe more research can be done to determine whether marraige factors contribute to churn in any adjacent ways?
+- Understanding demographic drivers of lifetime customers represents a key insight for customer prospecting.
 
 #### Correlations Between Policy Cost and Churn
 
