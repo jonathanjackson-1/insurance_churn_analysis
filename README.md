@@ -95,8 +95,6 @@ Summary Statistics for each group can be found below:
 - % w/ good credit: 84.62%
 - % married: 62.82%
 
-**All Customer Statistics**
-
 ### Key Insights
 #### Differences in Average Tenure
 There are clear differences in the mean tenure length of the Churned dataframe (2123 days) when compared to the Non-Churn group (3791 days). However, this is ultimately flawed by survivorship bias; customers who haven't churned are still active, increasing their tenure. 
@@ -107,9 +105,15 @@ Here, we opt to compare the churn rate at each year of tenure to come to a more 
 
 - Churn is significantly higher in years 0-1, peaking at 26.38% in the first year of tenure (Year 0), then falling off significantly. Drop off between the second and third year of tenure is still signficant.
 - Churn rate remains below 6% post-year-2, representing the end of a critical period in customer retention efforts.
+- Represents a significant opportunity to drive profit: focusing customer retention efforts to drive lower churn in year one of tenure may create more lifelong customers.
 
 #### Differences in Demographic Variables
+Demographic variables observed: Income, Length of Residence, Home Value, Have Child, Homeowner, Credit Score, Marraige Status
 
-note: married % research?
+- Little to no differences were shown in summary statistics between the two groups.
+- The only difference of note was found in the % married, with 62.82% married in the Non-Churn group as opposed to 41.83% among churned customers.
+- Maybe more research can be done to determine whether marraige factors contribute to churn in any adjancent ways?
+
+#### Correlations Between Policy Cost and Churn
 
 ### Recommendations
