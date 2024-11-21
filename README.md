@@ -1,6 +1,6 @@
 # Insurance Churn Analysis
 ## Summary
-This analysis aims to decypher demographic variables that are likely to be correlated with high churn, in the case of an auto-insurance company's customers. 
+This exploratory data analysis aims to decypher demographic variables that are likely to be correlated with high churn, in the case of an auto-insurance company's customers. 
 
 The project's main goal is to recommend strategies to reduce churn, as well as to uncover key risk components of churn, in order to provide guidance to the marketing team on future customer segmentation.
 
@@ -116,7 +116,12 @@ Demographic variables observed: Income, Length of Residence, Home Value, Have Ch
 - Understanding demographic drivers of lifetime customers represents a key insight for customer prospecting.
 
 #### Correlations Between Policy Cost and Churn
+To answer whether correlations are shown between policy cost and churn, we create a density plot to map the distribution of policy cost against churn status:
 
 <img src="https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/visualizations/Churn%20Rate%20vs%20Policy%20Cost.png" width="850">
+
+- Little to no correlation is shown between the two variables
+- This does not suggest that increasing prices has no consequence on churn, but it does indicate that higher paying customer are not inherently at risk for churn.
+- Focusing on customer satisfaction for individuals with higher policy costs may have positive impact on both revenues and profits.
 
 ### Recommendations
