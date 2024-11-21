@@ -1,11 +1,12 @@
 # Insurance Churn Analysis
 ## Summary
-This exploratory data analysis aims to decypher demographic variables that are likely to be correlated with high churn, in the case of an auto-insurance company's customers. 
+This exploratory data analysis aims to decypher demographic and policy variables that are likely to be correlated with high churn, in the case of an auto-insurance company's customers. 
 
-The project's main goal is to recommend strategies to reduce churn, as well as to uncover key risk components of churn, in order to provide guidance to the marketing team on future customer segmentation.
+The project's main goal is to recommend strategies to reduce churn, as well as to uncover key risk components of churn, in order to provide guidance to the marketing team on future customer segmentation, as well as insights to drive key profit metrics like the churn rate and customer lifetime value.
 
 **Insights from this analysis are focused on these key variables:**
 - Annual Policy Cost
+- Tenure
 - Income
 - Home Value
 - College Education
@@ -21,29 +22,16 @@ The project's main goal is to recommend strategies to reduce churn, as well as t
 
 ### Deliverables
 - Clean Database accessible through postgresql containing all related tables. *(Full SQL Notebook accessible [here](https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/SQL_NOTEBOOK.sql))*
-- Executive Summary indicating key insights and visualizations uncovered during analysis, as well as reccomendations for future customer segmentation and areas of analysis.
-
-  
-### Processes
-#### SQL
-- Create "address" database and import all relevant tables
-- Clean data
-- Create dataframe containing demographic variables of churned customers; Create dataframe containing demographic variables of non-churned customers
-- Pull summary statistics for demographic variables of churned customers vs non-churned customers
-
-#### Tableau
-- Create relevant visualizations
-- Create dashboard showing key churn metrics, slicable by demographic varibale
-
-#### Python 
-- (TBD)
+- Executive Summary indicating key insights and visualizations uncovered during analysis
+- Reccomendations on strategies for future customer segmentation and customer retention efforts
+- Suggestions for future areas of analysis.
 
 
 ## Data Structure
 ### Project Resources
 Based on a public dataset of auto-insurance customers found on Kaggle. *(Accessible [here](https://www.kaggle.com/datasets/merishnasuwal/auto-insurance-churn-analysis-dataset?select=address.csv))*
 
-The project uses Postgresql to support data cleaning/manipulation/extraction, Tableau for all data visualizations, and Python for all data modeling purposes.
+The project uses Postgresql to support data cleaning/manipulation/extraction and Tableau for all data visualizations.
 
 ### Size of Dataset
 This dataset is based on 4 tables (“address”, “customer”, “demographic”, “termination”), each containing information linked to a customer’s tenure with a hypothetical auto insurance company. 
@@ -63,7 +51,7 @@ Each customer is defined by the primary identifier “INDIVIDUAL_ID”. Addition
 
 ## Insights Deep Dive
 ### Overview of Analysis Process
-This analysis begins by separating all data into 3 seperate groups based on chrun status. "Churned Customers", "Nonchurned Customers", and "All" - which cointains all data from both of the prior groups. We analyze all demographic data and the tenure length of each customer.
+This analysis begins by separating all data into seperate groups based on chrun status. "Churned Customers" and "Nonchurned Customers". We analyze all demographic data as well as the tenure length and policy cost of each customer.
 
 Summary Statistics for each group can be found below:
 
@@ -122,6 +110,6 @@ To answer whether correlations are shown between policy cost and churn, we creat
 
 - Little to no correlation is shown between the two variables
 - This does not suggest that increasing prices has no consequence on churn, but it does indicate that higher paying customer are not inherently at risk for churn.
-- Focusing on customer satisfaction for individuals with higher policy costs may have positive impact on both revenues and profits.
+- Focusing on customer satisfaction for individuals with higher policy costs may have positive impact on both revenues and profits by improving customer lifetime value in a high-profit segment.
 
 ### Recommendations
