@@ -101,7 +101,7 @@ There are clear differences in the mean tenure length of the Churned dataframe (
 
 Here, we opt to compare the churn rate at each year of tenure to come to a more accurate conclusion:
 
-<img src="https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/visualizations/Churn%20Rate%20by%20Tenure%20Year%20Graph.png" width="700">
+<img src="https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/visualizations/Churn%20Rate%20by%20Tenure%20Year%20Graph.png" width="850">
 
 - Churn is significantly higher in years 0-1, peaking at 26.38% in the first year of tenure (Year 0), then falling off significantly. Drop off between the second and third year of tenure is still signficant.
 - Churn rate remains below 6% post-year-2, representing the end of a critical period in customer retention efforts.
