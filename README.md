@@ -117,4 +117,6 @@ Demographic variables observed: Income, Length of Residence, Home Value, Have Ch
 
 #### Correlations Between Policy Cost and Churn
 
+<img src="https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/visualizations/Churn%20Rate%20vs%20Policy%20Cost.png" width="850">
+
 ### Recommendations
