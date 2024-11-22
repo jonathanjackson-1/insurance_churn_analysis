@@ -48,6 +48,17 @@ Each customer is defined by the primary identifier “INDIVIDUAL_ID”. Addition
 
 
 ## Executive Summary
+### Objective
+This analysis explores key demographic and policy factors influencing customer churn. The primary objective is to identify insights which will deepen our understanding surrounnding our target customers and enhance both customer retention and customer lifetime values.
+
+### Key Insights
+#### Churn Rate Peaks within the First Year of Tenure
+- Churn rates peak at 26.38% withinin the first year of tenure, dropping significantly and immediately after, and remaining below 6% from year two onwards.
+- This suggests that the first year of tenure is a critical stage of customer retentention, after which long-term customer loyalty is achieved.
+- Opportunity: Customer Retention strategies focused particularlry on first-year clients could have outsized impacts on customer lifetime value and overall churn rates, leading to improved profitability.
+
+<img src="https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/visualizations/Churn%20Rate%20by%20Tenure%20Year%20Graph.png" width="850">
+
 
 ## Insights Deep Dive
 ### Overview of Analysis Process
@@ -112,4 +123,3 @@ To answer whether correlations are shown between policy cost and churn, we creat
 - This does not suggest that increasing prices has no consequence on churn, but it does indicate that higher paying customer are not inherently at risk for churn.
 - Focusing on customer satisfaction for individuals with higher policy costs may have positive impact on both revenues and profits by improving customer lifetime value in a high-profit segment.
 
-### Recommendations
