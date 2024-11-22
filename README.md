@@ -51,6 +51,12 @@ Each customer is defined by the primary identifier “INDIVIDUAL_ID”. Addition
 ### Objective
 This analysis explores key demographic and policy factors influencing customer churn. The primary objective is to identify insights which will deepen our understanding surrounnding our target customers and enhance both customer retention and customer lifetime values.
 
+### Guiding Questions
+The questions guiding this analysis are as follows:
+- Which demographic variables are correlated with increased churn?
+- Are higher Policy Costs correlated with increased churn?
+- Is there a length of tenure at which churn becomes unlikely?
+
 ### Key Insights
 #### Churn Rate Peaks within the First Year of Tenure
 - Churn rates peak at 26.38% withinin the first year of tenure, dropping significantly and immediately after, and remaining below 6% from year two onwards.
