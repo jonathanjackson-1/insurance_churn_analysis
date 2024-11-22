@@ -59,6 +59,23 @@ This analysis explores key demographic and policy factors influencing customer c
 
 <img src="https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/visualizations/Churn%20Rate%20by%20Tenure%20Year%20Graph.png" width="850">
 
+#### Little Correlaton Found Between Policy Cost and Churn Rate
+- The density graph created shows little to no correlation between policy costs and churn rate
+- This suggests higher paying customers are not inherently at risk for churn
+- Opportunity: Higher paying customers drive top-line revenue and are also more profitable; knowing that they are not inherently riskier can be an opportunity to focus
+  
+- note: This data does not imply that raising prices has little consequence on an individual's likelihood of churn
+
+<img src="https://github.com/jonathanjackson-1/insurance_churn_analysis/blob/main/visualizations/Churn%20Rate%20vs%20Policy%20Cost.png" width="850">
+
+#### Demographic Variables Associated with Increased Churn
+- Demographic variables like income, homeownership, and education showed minimal differences between churned and non-churned groups.
+- Marriage status was the notable exception, with a significantly lower percentage of married individuals in the churned group (41.83%) compared to non-churned customers (62.82%).
+- Further research could explore potential connections between marital status and customer loyalty.
+- Opportunity: Understanding demographic drivers of lifetime customers represents a key insight for marketing, specificially, future customer prospecting.
+
+### Recommendations
+
 
 ## Insights Deep Dive
 ### Overview of Analysis Process
