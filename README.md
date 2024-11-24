@@ -81,8 +81,22 @@ The questions guiding this analysis are as follows:
 - Opportunity: Understanding demographic drivers of lifetime customers represents a key insight for marketing, specificially, future customer prospecting.
 
 ### Recommendations
+#### 1. Retention Strategy: Early Tenure
+- Focus retention efforts during the first year of a customer’s tenure, such as:
+- Personalized onboarding experiences.
+- Incentives like loyalty discounts or added services.
+- Proactive customer support during initial policy periods.
 
+#### 2.	High-Value Customer Management
+- For customers with higher policy costs, prioritize customer satisfaction to mitigate churn risk and boost lifetime value.
+- Strategies include regular engagement, premium support, and tailored benefits for high-value policyholders.
 
+#### 3.	Future Analysis Opportunities
+- Explore deeper relationships between marital status and customer retention behaviors.
+- Investigate other potential demographic or behavioral factors that might indirectly influence churn.
+- Study the impact of policy adjustments or communication strategies on first-year retention rates.
+
+ 
 ## Insights Deep Dive
 ### Overview of Analysis Process
 This analysis begins by separating all data into seperate groups based on chrun status. "Churned Customers" and "Nonchurned Customers". We analyze all demographic data as well as the tenure length and policy cost of each customer.
