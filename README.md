@@ -82,7 +82,6 @@ The questions guiding this analysis are as follows:
 
 ### Recommendations
 #### 1. Retention Strategy: Early Tenure
-- Focus retention efforts during the first year of a customer’s tenure, such as:
 - Personalized onboarding experiences.
 - Incentives like loyalty discounts or added services.
 - Proactive customer support during initial policy periods.
