@@ -68,7 +68,7 @@ The questions guiding this analysis are as follows:
 #### Little Correlaton Found Between Policy Cost and Churn Rate
 - The density graph created shows little to no correlation between policy costs and churn rate
 - This suggests higher paying customers are not inherently at risk for churn
-- Opportunity: Higher paying customers drive top-line revenue and are also more profitable; knowing that they are not inherently riskier can be an opportunity to focus
+- Opportunity: Higher paying customers drive top-line revenue and are also more profitable; knowing that they are not inherently riskier can be an opportunity to focus outbound efforts towards this group
   
 - note: This data does not imply that raising prices has little consequence on an individual's likelihood of churn
 
