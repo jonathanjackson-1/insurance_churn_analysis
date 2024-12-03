@@ -1,6 +1,6 @@
 # Insurance Churn Analysis
 ## Summary
-This exploratory data analysis aims to decypher demographic and policy variables that are likely to be correlated with high churn, in the case of an auto-insurance company's customers. 
+This exploratory data analysis aims to decipher demographic and policy variables that are likely to be correlated with high churn, in the case of an auto-insurance company's customers. 
 
 The project's main goal is to recommend strategies to reduce churn, as well as to uncover key risk components of churn, in order to provide guidance to the marketing team on future customer segmentation, as well as insights to drive key profit metrics like the churn rate and customer lifetime value.
 
