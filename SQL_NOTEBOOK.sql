@@ -49,7 +49,7 @@ SET "LOW_VALUATION" =
             WHEN "HOME_MARKET_VALUE" LIKE '%Plus%' 
             THEN CAST(regexp_replace("HOME_MARKET_VALUE", '[^0-9]', '', 'g') AS BIGINT)
             ELSE NULL
-        END;
+        END,
     "HIGH_VALUATION" = 
         CASE 
             WHEN "HOME_MARKET_VALUE" LIKE '% - %' 
